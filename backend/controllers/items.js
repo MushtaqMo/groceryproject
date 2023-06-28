@@ -9,7 +9,7 @@ const getProducts = async (req,res) => {
     })
 }
 
-
+// adding item to the cart
 const createProduct = async (req, res) => {
     try {
         const {text} = req.body
