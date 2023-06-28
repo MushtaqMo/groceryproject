@@ -37,4 +37,5 @@ stock = [
     {name: "chicken nuggets", price: 2.60, category: "frozenfood"},
 ]
 
+
 export default stock;
