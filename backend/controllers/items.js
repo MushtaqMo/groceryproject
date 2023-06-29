@@ -12,10 +12,13 @@ const getProducts = async (req,res) => {
 // adding item to the cart
 const createProduct = async (req, res) => {
     try {
-        const {text} = req.body
+        const {name} = req.body
+        const {price} = req.body
+        const {category} = req.body
+        const {numberSelected} = 1
 
         const productObject = new Product({
-            text
+            name, price, category, numberSelected
         })
 
         const newProduct = await productObject.save()
