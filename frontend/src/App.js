@@ -1,14 +1,17 @@
-import Navbar from "./components/navbar"
-import { addToCart } from "./api/addToCart"
-import { deleteFromCart } from "./api/deleteFromCart"
-import { editCart } from "./api/editCartQuantity"
-import { getCart } from "./api/getCart"
-import { readCart } from "./api/readCart"
+import React from "react";
+import Navbar from "./components/navbar";
+import Home from "./pages/index";
+import editCart from "./api/editCartQuantity";
+import addToCart from "./api/addToCart";
+import getCart from "./api/getCart";
+import readCart from "./api/readCart";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 const App = () => {
     return (
         <div>
-            <browserRouter>
+            <BrowserRouter>
             <h1>hello world</h1>
         <Navbar />
         <Routes>
@@ -22,7 +25,7 @@ const App = () => {
             />
             <Route 
                 path='/:id'
-                element={<editCartQuantity/>}
+                element={<editCart/>}
             />
             <Route 
                 path='./api/getCart'
@@ -33,7 +36,7 @@ const App = () => {
                 element={<readCart/>}
             />
         </Routes>
-        </browserRouter>
+        </BrowserRouter>
         </div>
 
     )
