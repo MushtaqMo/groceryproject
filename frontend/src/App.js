@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/navbar";
-import Home from "./pages/index";
+import Home from "./pages/Home";
 import editCart from "./api/editCartQuantity";
 import addToCart from "./api/addToCart";
 import getCart from "./api/getCart";
@@ -20,19 +20,19 @@ const App = () => {
                 element={<Home />}
             />
             <Route 
-                path='./api/addToCart'
+                path='/addToCart'
                 element={<addToCart/>}
             />
             <Route 
-                path='/:id'
+                path='editCartQuantity/:id'
                 element={<editCart/>}
             />
             <Route 
-                path='./api/getCart'
+                path='/getCart'
                 element={<getCart/>}
             />
             <Route 
-                path='./api/readCart'
+                path='/readCart'
                 element={<readCart/>}
             />
         </Routes>
