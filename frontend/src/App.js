@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import Home from "./pages/Home";
-import editCart from "./api/editCartQuantity";
-import addToCart from "./api/addToCart";
-import getCart from "./api/getCart";
-import readCart from "./api/readCart";
+import EditCart from "./api/editCartQuantity";
+import AddToCart from "./api/addToCart";
+import GetCart from "./api/getCart";
+import ReadCart from "./api/readCart";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -21,19 +21,19 @@ const App = () => {
             />
             <Route 
                 path='/addToCart'
-                element={<addToCart/>}
+                element={<AddToCart/>}
             />
             <Route 
                 path='editCartQuantity/:id'
-                element={<editCart/>}
+                element={<EditCart/>}
             />
             <Route 
                 path='/getCart'
-                element={<getCart/>}
+                element={<GetCart/>}
             />
             <Route 
                 path='/readCart'
-                element={<readCart/>}
+                element={<ReadCart/>}
             />
         </Routes>
         </BrowserRouter>
