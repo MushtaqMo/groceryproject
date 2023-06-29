@@ -1,5 +1,6 @@
 import { useState } from "react"
 import stock from '../../../backend/availableStock.js'
+import addHandler from '../pages/Home.js'
 
 const showSnacks = () => {
     let snacksStock = stock

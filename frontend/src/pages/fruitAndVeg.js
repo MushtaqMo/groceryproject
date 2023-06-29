@@ -1,5 +1,6 @@
 import { useState } from "react"
 import stock from '../../../backend/availableStock.js'
+import addHandler from '../pages/Home.js'
 
 const showFruitAndVeg = () => {
     let fruitAndVegStock = stock
@@ -19,4 +20,4 @@ const showFruitAndVeg = () => {
     )
 }
 
-export default showMFruitAndVeg;
+export default showFruitAndVeg;
