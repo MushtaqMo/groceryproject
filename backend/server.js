@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const itemRoutes = require('./routes/items')
@@ -6,7 +7,7 @@ const cors = require('cors')
 const app = express();
 app.use(cors())
 app.use(express.json())
-app.use('.models/cart.js', itemRoutes)
+app.use('/models', itemRoutes)
 
 
 mongoose.connect(process.env.MONGODB_URL)
