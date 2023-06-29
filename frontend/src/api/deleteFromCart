@@ -1,7 +1,7 @@
 const API_URL = `http://localhost:4000`
 
 export const deleteFromCart = async (product) => {
-    const response = await fetch (`${API_URL}/products/items`, {
+    const response = await fetch (`${API_URL}/products/items/${product}`, {
         method: 'DELETE',
         headers: {
             'content-type': 'application/json'
