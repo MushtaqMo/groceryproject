@@ -21,7 +21,16 @@ const App = () => {
                 element={<addToCart/>}
             />
             <Route 
-                path=''
+                path='/:id'
+                element={<editCartQuantity/>}
+            />
+            <Route 
+                path='./api/getCart'
+                element={<getCart/>}
+            />
+            <Route 
+                path='./api/readCart'
+                element={<readCart/>}
             />
         </Routes>
         </browserRouter>
