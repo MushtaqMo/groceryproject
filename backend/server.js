@@ -1,6 +1,5 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const itemsController = require('./controllers/items');
 const itemRoutes = require('./routes/items')
 const cors = require('cors')
 
@@ -15,8 +14,7 @@ mongoose.connect(process.env.MONGODB_URL)
 // frontend is running on port 3000
 .then(() => {
 
- 
-
     app.listen(4000, function() {
         console.log("Server running on 4000")
     })
+  })
