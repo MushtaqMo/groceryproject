@@ -45,7 +45,6 @@ const cartSchema = new mongoose.Schema({
 
     app.post('/cart', itemsController.createProduct);
 
-
     app.listen(4000, function() {
-        console.log("Server running on 4000")
-    })
+      console.log("Server running on 4000")
+  })
