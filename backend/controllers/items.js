@@ -3,6 +3,7 @@ const Product = require("../models/cart")
 
 const getProducts = async (req,res) => {
     const items = await Product.find({})
+    console.log(items)
     res.json({
         message: "all items",
         products:items
@@ -15,34 +16,28 @@ const createProduct = async (req, res) => {
         const {name} = req.body
         const {price} = req.body
         const {category} = req.body
-        const {numberSelected} = 1
+        const {numberSelected} = req.body
 
         const productObject = new Product({
-            name, price, category, numberSelected
+            name: name, price: price, category: category, numberSelected: numberSelected
         })
-
+console.log(productObject)
         const newProduct = await productObject.save()
 
         res.status(200).json(newProduct)
     } catch (error) {
         res.status(500).json({
-            error
+            error: error.message
         })
     }
 
 }
 
-
-
-
-
-
-
 const getProduct = async (req, res) => {
     try {
         const { id } = req.params
        
-        const product = await product.findById(id)
+        const product = await Product.findById(id)
         res.status(200).json(product)
     } catch (error) {
         res.status(500).json({
@@ -50,8 +45,6 @@ const getProduct = async (req, res) => {
         })
     }
 }
-
-
 
 
 const editProduct = async (req, res) => {
@@ -65,10 +58,7 @@ const editProduct = async (req, res) => {
             error
         })
     }
-
-
 }
-
 
 const deleteProduct = async (req, res) => {
     try {
@@ -76,7 +66,7 @@ const deleteProduct = async (req, res) => {
         await Product.findByIdAndDelete(id);
 
         res.status(200).json({
-            message: "successfully deleted todo"
+            message: "successfully deleted item"
         })
     } catch (error) {
         res.status(500).json({
