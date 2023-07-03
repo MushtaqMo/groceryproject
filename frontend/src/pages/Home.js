@@ -36,7 +36,7 @@ const Home = () => {
     //      fetchProducts()
     // } )
 
-    if (!products) return <h1>loading...</h1>
+    // if (!products) return <h1>loading...</h1>
     return (
         <div>
             <Link to = '/drinks'><button>Drinks</button></Link>
