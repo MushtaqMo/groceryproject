@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { addToCart } from "../api/addToCart";
-import { deleteProduct } from "../deleteProduct";
+import { deleteFromCart } from "../api/deleteFromCart";
 
 const Home = () => {
     const [products, setProducts] = useState([])
