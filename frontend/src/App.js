@@ -7,6 +7,7 @@ import ShowFrozenFood from "./pages/frozenFood"
 import ShowSnacks from "./pages/snacks"
 import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowFruitAndVeg from "./pages/fruitAndVeg";
+import Cart from "./pages/cart"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -40,6 +41,10 @@ const App = () => {
             <Route 
                 path='/meatAndFish'
                 element={<ShowMeatAndFish/>}
+            /> 
+            <Route 
+                path='/cart'
+                element={<Cart/>}
             />   
             <Route 
                 path='/fruitAndVeg'
