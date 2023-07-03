@@ -1,13 +1,16 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import Home from "./pages/Home";
+// import editCart from "./api/editCartQuantity";
+// import addToCart from "./api/addToCart";
+// import getCart from "./api/getCart";
+// import readCart from "./api/readCart";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowDairy from "./pages/dairy"
 import ShowDrinks from "./pages/drinks"
-import ShowFrozenFood from "./pages/frozenFood"
+import ShowFruitAndVeg from "./pages/fruitAndVeg"
 import ShowSnacks from "./pages/snacks"
-import ShowMeatAndFish from "./pages/meatAndFish";
-import ShowFruitAndVeg from "./pages/fruitAndVeg";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 const App = () => {
@@ -20,31 +23,46 @@ const App = () => {
             <Route
                 path='/'
                 element={<Home />}
-            />   
+            />
+            {/* <Route 
+                path='/addToCart'
+                element={<addToCart/>}
+            />
             <Route 
-                path='/dairy'
-                element={<ShowDairy/>}
-            /> 
+                path='editCartQuantity/:id'
+                element={<editCart/>}
+            />
             <Route 
-                path='/drinks'
-                element={<ShowDrinks/>}
-            />   
+                path='/getCart'
+                element={<getCart/>}
+            />
             <Route 
-                path='/frozenFood'
-                element={<ShowFrozenFood/>}
-            />    
+                path='/readCart'
+                element={<readCart/>}
+            /> */}
             <Route 
-                path='/snacks'
-                element={<ShowSnacks/>}
-            />   
+            path='/drinks'
+            element={<ShowDrinks/>}/>
+
             <Route 
-                path='/meatAndFish'
-                element={<ShowMeatAndFish/>}
-            />   
+            path='/snacks'
+            element={<ShowSnacks/>}/>
+
             <Route 
-                path='/fruitAndVeg'
-                element={<ShowFruitAndVeg/>}
-            />                     
+            path='/dairy'
+            element={<ShowDairy/>}/>
+
+            <Route 
+            path='/frozenFood'
+            element={<GetFrozenFood/>}/>
+
+            <Route 
+            path='/fruitAndVeg'
+            element={<ShowFruitAndVeg/>}/>
+
+            <Route 
+            path='/meatAndFish'
+            element={<ShowMeatAndFish/>}/>
         </Routes>
         </BrowserRouter>
         </div>
