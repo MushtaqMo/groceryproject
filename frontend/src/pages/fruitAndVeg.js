@@ -1,5 +1,5 @@
 import { useState } from "react"
-import stock from '../../../backend/availableStock.js'
+import stock from '../availableStock'
 import addHandler from '../pages/Home.js'
 
 const showFruitAndVeg = () => {
