@@ -1,8 +1,8 @@
 const API_URL = `http://localhost:4000`
 
 
-export const EditCart = async (updatedQuantity) => {
-    const response = await fetch(`${API_URL}/products/items/`, {
+export const editCart = async (updatedQuantity) => {
+    const response = await fetch(`${API_URL}/grocery/items/${product._id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
