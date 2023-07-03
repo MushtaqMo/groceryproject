@@ -1,4 +1,4 @@
-stock = [
+let stock = [
     {name: "Instant Coffee", price: 4.00, category: "drinks"},
     {name: "Tea", price: 2.95, category: "drinks"},
     {name: "Orange Juice", price: 1.75, category: "drinks"},

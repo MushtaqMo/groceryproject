@@ -2,7 +2,7 @@ import { useState } from "react"
 import stock from '../availableStock'
 import addHandler from '../pages/Home.js'
 
-const showFrozenFood = () => {
+const ShowFrozenFood = () => {
     let frozenFoodStock = stock
     {frozenFoodStock.filter(item => item.category === "frozenfood")}; 
 
@@ -20,4 +20,4 @@ const showFrozenFood = () => {
     )
 }
 
-export default showFrozenFood;
+export default ShowFrozenFood;
