@@ -4,16 +4,7 @@ import { deleteFromCart } from "../api/deleteFromCart";
 import {Link} from "react-router-dom";
 
 const Home = () => {
-    const [products, setProducts] = useState([])
 
-    const deleteHandler = async (product) => {
-        let response = await deleteProduct(product)
-        console.log(response)
-        let newItems = [...products]
-        newItems.filter(Item => Item._id != response.id)
-        setProducts(newItems)
-        alert('deleted item')
-    }
     const addHandler = async (item) => {
         let product = {
         name: item.name,
