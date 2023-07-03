@@ -1,6 +1,6 @@
 const API_URL = `http://localhost:4000`
 
-export const addToCart = async (product) => {
+export const AddToCart = async (product) => {
     const response = await fetch (`${API_URL}/products/items`, {
         method: 'POST',
         body: JSON.stringify(product),
@@ -14,3 +14,5 @@ export const addToCart = async (product) => {
         return json
 
 }
+
+export default AddToCart;
