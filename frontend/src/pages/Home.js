@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { AddToCart } from "../api/addToCart";
-import { deleteFromCart } from "../api/deleteFromCart";
+import { addToCart } from "../api/addToCart";
 import {Link} from "react-router-dom";
 
 const Home = () => {
@@ -13,7 +12,7 @@ const Home = () => {
         numberSelected: 1
         }
 
-        let response = await AddToCart(product)
+        let response = await addToCart(product)
         console.log(response)
         alert('added item')
         }

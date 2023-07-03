@@ -1,32 +1,38 @@
 import { useEffect, useState } from "react";
 import { readCart } from "../api/readCart";
 import Card from "../components/Card";
-import { DeleteFromCart } from "../api/deleteFromCart";
+import  { deleteFromCart } from "../api/deleteFromCart";
+import { editCart } from "../api/editCartQuantity"
 
 const Cart = () => {
     const [cart, setCart] = useState([])
 
     const deleteHandler = async (product) => {
-        let response = await DeleteFromCart(product)
+        let response = await deleteFromCart(product)
         console.log(response)
         let newItems = [...cart]
-        newItems.filter(Item => Item._id != response.id)
+        newItems.filter(Item => Item._id != response._id)
         setCart(newItems)
         alert('deleted item')
     }
 
-    const increaseQuantity = (item, cart, setCart) => {
+    const increaseQuantity = async (item) => {
         let newCart = [...cart]
         item.numberSelected += 1;
         setCart(newCart)
+        let response = await editCart(item)
+        console.log(response)
+
       }
 
-    const decreaseQuantity = (item, cart, setCart) => {
+    const decreaseQuantity = async (item) => {
         let newCart = [...cart]
         if (item.numberSelected > 1) {
             item.numberSelected -= 1;
         }
         setCart(newCart)
+        let response = await editCart(item)
+        console.log(response)
     }
 
     useEffect(() => {
@@ -54,8 +60,7 @@ const Cart = () => {
         <button onClick={() => decreaseQuantity(item)}>-</button>
         <p>Total Price: {item.price * item.numberSelected}</p>
         <button onClick={() => increaseQuantity(item)}>+</button>    
-        <Card item = {item} cart = {cart} setCart = {setCart} deleteHandler = {deleteHandler}/>
-
+        <button onClick={() => deleteHandler(item)}>delete from cart</button>
     </div>
     )
     :
