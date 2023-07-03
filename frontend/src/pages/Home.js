@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { addToCart } from "../api/addToCart";
 import { deleteFromCart } from "../api/deleteFromCart";
+import {Link} from "react-router-dom";
 
 const Home = () => {
     const [products, setProducts] = useState([])
@@ -26,16 +27,16 @@ const Home = () => {
         alert('added item')
         }
         
-    useEffect(() => {
-        const fetchProducts = async () => {
-            let data = await readProducts()
-            setProducts(data.products)
-            console.log(data.message)
-         }
-         fetchProducts()
-    } )
+    // useEffect(() => {
+    //     const fetchProducts = async () => {
+    //         let data = await readCart()
+    //         setProducts(data.products)
+    //         console.log(data.message)
+    //      }
+    //      fetchProducts()
+    // } )
 
-    if (!products) return <h1>loading...</h1>
+    // if (!products) return <h1>loading...</h1>
     return (
         <div>
             <Link to = '/drinks'><button>Drinks</button></Link>

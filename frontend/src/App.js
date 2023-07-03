@@ -1,10 +1,12 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import Home from "./pages/Home";
-import editCart from "./api/editCartQuantity";
-import addToCart from "./api/addToCart";
-import getCart from "./api/getCart";
-import readCart from "./api/readCart";
+import ShowDairy from "./pages/dairy"
+import ShowDrinks from "./pages/drinks"
+import ShowFrozenFood from "./pages/frozenFood"
+import ShowSnacks from "./pages/snacks"
+import ShowMeatAndFish from "./pages/meatAndFish";
+import ShowFruitAndVeg from "./pages/fruitAndVeg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -18,23 +20,31 @@ const App = () => {
             <Route
                 path='/'
                 element={<Home />}
-            />
+            />   
             <Route 
-                path='/addToCart'
-                element={<AddToCart/>}
-            />
+                path='/dairy'
+                element={<ShowDairy/>}
+            /> 
             <Route 
-                path='editCartQuantity/:id'
-                element={<EditCart/>}
-            />
+                path='/drinks'
+                element={<ShowDrinks/>}
+            />   
             <Route 
-                path='/getCart'
-                element={<GetCart/>}
-            />
+                path='/frozenFood'
+                element={<ShowFrozenFood/>}
+            />    
             <Route 
-                path='/readCart'
-                element={<ReadCart/>}
-            />
+                path='/snacks'
+                element={<ShowSnacks/>}
+            />   
+            <Route 
+                path='/meatAndFish'
+                element={<ShowMeatAndFish/>}
+            />   
+            <Route 
+                path='/fruitAndVeg'
+                element={<ShowFruitAndVeg/>}
+            />                     
         </Routes>
         </BrowserRouter>
         </div>

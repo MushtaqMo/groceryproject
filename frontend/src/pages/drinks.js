@@ -1,8 +1,8 @@
 import { useState } from "react"
-import stock from '../../../backend/availableStock.js'
+import stock from '../availableStock'
 import addHandler from '../pages/Home.js'
 
-const showDrinks = () => {
+const ShowDrinks = () => {
     let drinksStock = stock
     {drinksStock.filter(item => item.category === "drinks")}; 
 
@@ -20,4 +20,4 @@ const showDrinks = () => {
     )
 }
 
-export default showDrinks;
+export default ShowDrinks;
