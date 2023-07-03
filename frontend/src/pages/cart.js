@@ -7,30 +7,32 @@ const Cart = () => {
     useEffect(() => {
         const fetchcartProducts= async () => {
             const data = await readCart()
-            setCart(data)
-            console.log(cart)
+            setCart(data.products)
         }
         fetchcartProducts()
     
     }, [])
 
-    if (!cart) return <h1>loading...</h1>
     return (
 <div>
 
     <h1>
-
         cart
-        cart ? cart.map((cart) =>  key={todo._id} deleteHandler={() => onDeleteTodo(todo)} todo={todo}/>)
     </h1>
-</div>
-
-
+    <div>
+    {
+    cart ? cart.map((item) => 
+    <div>
+        <p>{item.name}</p>
+        <p>{item.price}</p>
+    </div>
     )
-
-
-
+    :
+    <p>loading...</p>
     }
 
-
+    </div>
+</div>
+    )
+    }
 export default Cart
