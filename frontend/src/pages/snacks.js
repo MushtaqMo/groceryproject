@@ -1,6 +1,17 @@
 import { useState } from "react"
 import stock from '../availableStock'
-import addHandler from '../pages/Home.js'
+import { addToCart } from "../api/addToCart";
+
+const addHandler = async (item) => {
+    let product = {
+    name: item.name,
+    price: item.price,
+    category: item.category,
+    numberSelected: 1
+    }
+    let response = await addToCart(product)
+    alert('added item')
+    }
 
 const ShowSnacks = () => {
     return (
@@ -10,7 +21,7 @@ const ShowSnacks = () => {
             <div>
                 <p>{snackStock.name}</p>
                 <p>{snackStock.price}</p>
-                <button onClick = {() => addHandler(item)}>Add To Basket</button>
+                <button onClick = {() => addHandler(snackStock)}>Add To Basket</button>
             </div>
             )}
         </div>
