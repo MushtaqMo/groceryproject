@@ -3,18 +3,13 @@ import stock from '../availableStock'
 import addHandler from '../pages/Home.js'
 
 const ShowSnacks = () => {
-    let snacksStock = stock
-    console.log(snacksStock)
-    {snacksStock.filter(item => item.category === "snacks")}; 
-    console.log(snacksStock)
-
     return (
         <div>
             <h1>Snacks</h1>
-            {snacksStock.map((item) =>
+            {stock.filter(item => item.category === "snacks").map(snackStock =>
             <div>
-                <p>{item.name}</p>
-                <p>{item.price}</p>
+                <p>{snackStock.name}</p>
+                <p>{snackStock.price}</p>
                 <button onClick = {() => addHandler(item)}>Add To Basket</button>
             </div>
             )}
