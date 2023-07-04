@@ -1,19 +1,9 @@
 import { useEffect, useState } from "react";
-import { AddToCart } from "../api/addToCart";
-import { deleteFromCart } from "../api/deleteFromCart";
+import { addToCart } from "../api/addToCart";
 import {Link} from "react-router-dom";
 
 const Home = () => {
-    const [products, setProducts] = useState([])
 
-    const deleteHandler = async (product) => {
-        let response = await deleteProduct(product)
-        console.log(response)
-        let newItems = [...products]
-        newItems.filter(Item => Item._id != response.id)
-        setProducts(newItems)
-        alert('deleted item')
-    }
     const addHandler = async (item) => {
         let product = {
         name: item.name,
@@ -22,7 +12,7 @@ const Home = () => {
         numberSelected: 1
         }
 
-        let response = await AddToCart(product)
+        let response = await addToCart(product)
         console.log(response)
         alert('added item')
         }

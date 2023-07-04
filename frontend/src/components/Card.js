@@ -1,17 +1,15 @@
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
-const Card= ({ item, deleteHandler }) => {
+// const Card= ({ item, deleteHandler }) => {
 
-    return (
-        <div>
-            <p>{item.name}</p>
-            <p>{item.price}</p>
-            <button onClick={deleteHandler}>delete from cart</button>
-            <Link
-                to={`/${item._id}`} 
-            >
-            </Link>
-        </div>
-    )
-}
-export default Card
+//     return (
+//         <div>     
+//             <button onClick={deleteHandler}>delete from cart</button>
+//             <Link
+//                 to={`/${item._id}`} 
+//             >
+//             </Link>
+//         </div>
+//     )
+// }
+// export default Card
