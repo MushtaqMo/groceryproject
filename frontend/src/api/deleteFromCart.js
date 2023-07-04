@@ -10,4 +10,4 @@ export const deleteFromCart = async (product) => {
         }})
 
         const json = await response.json()
-        return json
+        return json}
