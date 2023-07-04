@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { addToCart } from "../api/addToCart";
 import {Link} from "react-router-dom";
+import Search from "./search";
 
 const Home = () => {
 
@@ -36,6 +37,7 @@ const Home = () => {
             <Link to = '/meatAndFish'><button>Meat and Fish</button></Link>
             <Link to = '/frozenFood'><button>Frozen Food</button></Link>
             <Link to = '/cart'><button>Cart</button></Link>
+            <Link to = '/search'><form>search</form></Link>
 
             
         </div>

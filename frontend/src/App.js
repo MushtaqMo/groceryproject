@@ -11,6 +11,7 @@ import Cart from "./pages/cart"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
+
 const App = () => {
     return (
         <div>
@@ -45,7 +46,7 @@ const App = () => {
             <Route 
                 path='/cart'
                 element={<Cart/>}
-            />   
+            />    
             <Route 
                 path='/fruitAndVeg'
                 element={<ShowFruitAndVeg/>}
