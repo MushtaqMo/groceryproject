@@ -1,0 +1,28 @@
+.nav {
+  padding: 0.5rem 1rem;
+  background-color: lightgray;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav header .nav-link {
+  text-decoration: none;
+}
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid rgb(170, 44, 44);
+  border-radius: 12px;
+  background-color: #fff;
+  color: black;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+}
+
+.nav-button:hover {
+  background-color: rgb(204, 139, 139);
+  color: #fff;
+}
