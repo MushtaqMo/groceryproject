@@ -1,14 +1,14 @@
 import React from "react";
 import Navbar from "./components/navbar";
 import Home from "./pages/Home";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowDairy from "./pages/dairy"
 import ShowDrinks from "./pages/drinks"
+import ShowFrozenFood from "./pages/frozenFood"
 import ShowSnacks from "./pages/snacks"
+import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowFruitAndVeg from "./pages/fruitAndVeg";
 import Cart from "./pages/cart"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
     return (
