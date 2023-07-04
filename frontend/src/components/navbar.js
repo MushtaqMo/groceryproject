@@ -5,10 +5,10 @@ const Navbar = () => {
             <header>
                 <div>
                     <button>
-                    <Link to='../Home'> Home </Link>
+                    <Link to='/'> Home </Link>
                     </button>
                     <button>
-                    <Link to='../Basket'> Basket </Link>
+                    <Link to='/cart'> Basket </Link>
                     </button>
                 </div>
             </header>
