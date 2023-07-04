@@ -1,13 +1,26 @@
 import {useState} from "react"
 import stock from '../availableStock'
 
-const search = () => {
+const Search = () => {
+    const [searchTerm, setSearchTerm] = useState("")
     return (
         <div className="search">
-            <input type="text" placeholder="Search..."/>
-            {stock.map((value, key) => {
+            <input 
+            type="text"
+             placeholder="Search..."
+              onChange={e => {
+                setSearchTerm(e.target.value);
+                }}
+                />
+            {stock.filter((val)=>{
+                if (searchTerm =="") {
+                    return val
+                } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())){
+                    return val
+                }
+            }).map((value, key) => {
                 return(
-                    <div>
+                    <div className="user" key={key}>
                         <p>{value.name}</p>
                         <p>{value.price}</p>
                         </div>
@@ -15,60 +28,7 @@ const search = () => {
                 })}
 
             </div>
-         )
+                   )
 }
 
-export default search
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const getFilteredItems = (search, items) => {
-//     if (!search) {
-//         return items
-//     }
-//     return items.filter(stock=> stock.name.includes(search) )
-// }
-
-// export default function search() {
-//     const [search, setSearch] = useState('')
-
-//     const {stock} = availableStock
-//     const {items} = stock
-
-//     const filteredItems = getFilteredItems(search,items)
-
-
-
-//     return(
-//         <div>
-//             <label>search</label>
-//             <input type="text" onChange={e => setSearch(e.target.value)}/>
-//             <ul>
-//                 {filteredItems.map(value => <h1 key={value.name}>(value.name) {value.price}(value.price) {value.category}(value.category)</h1>)}
-//                 </ul>
-
-//             </div>
-
-//     )
-// }
+export default Search

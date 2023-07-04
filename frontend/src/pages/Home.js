@@ -36,8 +36,9 @@ const Home = () => {
             <Link to = '/fruitAndVeg'><button>Fruit and Vegetables</button></Link>
             <Link to = '/meatAndFish'><button>Meat and Fish</button></Link>
             <Link to = '/frozenFood'><button>Frozen Food</button></Link>
-            <Link to = '/cart'><button>Cart</button></Link>
-            <Link to = '/search'><form>search</form></Link>
+            <Link to = '/cart'><button>Cart</button></Link> 
+            <Search/> 
+            
 
             
         </div>
