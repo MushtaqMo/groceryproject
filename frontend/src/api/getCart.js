@@ -11,5 +11,3 @@ export const getCart = async () => {
     return json
 
 }
-
-export default getCart;
