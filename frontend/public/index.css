@@ -1,0 +1,25 @@
+.nav {
+    background-color: #333;
+    color: #fff;
+  }
+  
+.nav header {
+    display: flex;
+    justify-content: center;
+  }
+  
+.nav-button {
+    padding: 0.5rem 1rem;
+    border: 2px solid red;
+    border-radius: 20px;
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    margin: 0 0.5rem;
+  }
+  
+.nav-button:hover {
+    background-color: red;
+    color: #fff;
+  }
+  

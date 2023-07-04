@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom"
+import "/public/index.css";
+
 const Navbar = () => {
     return (
-        <div>
+        <div className="nav">
             <header>
                 <div>
-                    <button>
-                    <Link to='../Home'> Home </Link>
-                    </button>
-                    <button>
-                    <Link to='../Basket'> Basket </Link>
-                    </button>
+                    <Link to='../'> 
+                    <button className="nav-button"> Home </button>
+                    </Link>
+                    <Link to='../Cart'> 
+                    <button className="nav-button"> Basket </button>
+                    </Link>
+                    
                 </div>
             </header>
         </div>
