@@ -16,8 +16,8 @@ const App = () => {
     return (
         <div>
             <BrowserRouter>
-            <h1>hello world</h1>
         <Navbar />
+        <h1>TGC Groceries</h1>
         <Routes>
             <Route
                 path='/'
