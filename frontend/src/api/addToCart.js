@@ -15,4 +15,4 @@ export const addToCart = async (product) => {
 
 }
 
-export default AddToCart;
+export default addToCart;

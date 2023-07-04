@@ -12,4 +12,4 @@ export const getCart = async () => {
 
 }
 
-export default GetCart;
+export default getCart;

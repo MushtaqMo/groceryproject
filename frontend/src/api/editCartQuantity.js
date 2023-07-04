@@ -14,4 +14,4 @@ export const editCart = async (item) => {
     return json;
   };
   
-  export default EditCart;
+  export default editCart;
