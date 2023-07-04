@@ -1,6 +1,6 @@
 const API_URL = `http://localhost:4000`
 
-export const ReadCart = async () => {
+export const readCart = async () => {
 
      let response = await fetch(`${API_URL}/grocery/items`)
      // convert to json()
@@ -8,14 +8,5 @@ export const ReadCart = async () => {
      // return the data collect from fetch 
      console.log(data)
      return data
-<<<<<<< HEAD
+     
 }
-
-export default ReadCart
-=======
-
-     console.log(data)
-}
-
-
->>>>>>> Main
