@@ -1,6 +1,6 @@
 import { useState } from "react"
 import stock from '../availableStock'
-import { addToCart } from "../api/addToCart";
+import { AddToCart } from "../api/addToCart";
 
 const addHandler = async (item) => {
     let product = {
@@ -9,7 +9,7 @@ const addHandler = async (item) => {
     category: item.category,
     numberSelected: 1
     }
-    let response = await addToCart(product)
+    let response = await AddToCart(product)
     alert('added item')
     }
 

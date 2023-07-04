@@ -6,7 +6,16 @@ export const ReadCart = async () => {
      // convert to json()
      let data = await response.json()
      // return the data collect from fetch 
+     console.log(data)
      return data
+<<<<<<< HEAD
 }
 
 export default ReadCart
+=======
+
+     console.log(data)
+}
+
+
+>>>>>>> Main
