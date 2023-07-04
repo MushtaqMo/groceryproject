@@ -9,4 +9,5 @@ export const readCart = async () => {
      console.log(data)
      return data
      
+     console.log(data)
 }
