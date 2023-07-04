@@ -14,5 +14,3 @@ export const addToCart = async (product) => {
         return json
 
 }
-
-export default addToCart;
