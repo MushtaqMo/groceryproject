@@ -24,7 +24,7 @@ const Cart = () => {
         console.log(response)
 
       }
-
+        
     const decreaseQuantity = async (item) => {
         let newCart = [...cart]
         if (item.numberSelected > 1) {
