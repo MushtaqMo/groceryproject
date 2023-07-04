@@ -5,12 +5,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowDairy from "./pages/dairy"
 import ShowDrinks from "./pages/drinks"
-import ShowFruitAndVeg from "./pages/fruitAndVeg"
 import ShowSnacks from "./pages/snacks"
-import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowFruitAndVeg from "./pages/fruitAndVeg";
 import Cart from "./pages/cart"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
 const App = () => {
@@ -49,8 +46,8 @@ const App = () => {
                 element={<Cart/>}
             />   
             <Route 
-            path='/meatAndFish'
-            element={<ShowMeatAndFish/>}/>
+            path='/fruitAndVeg'
+            element={<ShowFruitAndVeg/>}/>
         </Routes>
         </BrowserRouter>
         </div>
