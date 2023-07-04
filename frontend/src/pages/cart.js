@@ -7,6 +7,12 @@ import { editCart } from "../api/editCartQuantity"
 const Cart = () => {
     const [cart, setCart] = useState([])
 
+    const deleteAll = async (cart, setCart) => {
+        let newItems = []
+        setCart(newItems)
+        cart.map((product) => deleteFromCart(product) )
+    }
+
     const deleteHandler = async (product) => {
         let response = await deleteFromCart(product)
         console.log(response)
@@ -24,7 +30,7 @@ const Cart = () => {
         console.log(response)
 
       }
-
+        
     const decreaseQuantity = async (item) => {
         let newCart = [...cart]
         if (item.numberSelected > 1) {
@@ -45,14 +51,15 @@ const Cart = () => {
     }, [])
 
     return (
-<div>
+    <div>
 
     <h1>
         cart
     </h1>
     <div>
     {
-    cart ? cart.map((item) => 
+    cart 
+    ? cart.map((item) => 
     <div>
         <p>Name: {item.name}</p>
         <p>Price per item: {item.price}</p>
@@ -67,6 +74,9 @@ const Cart = () => {
     <p>loading...</p>
     }
 
+    </div>
+    <div>
+        <button onClick = {() => deleteAll(cart, setCart)}>Empty Cart</button>
     </div>
 </div>
     )
