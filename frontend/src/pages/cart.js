@@ -13,11 +13,11 @@ const Cart = () => {
         cart.map((product) => deleteFromCart(product) )
     }
 
-    const deleteHandler = async (product) => {
+    const deleteHandler = async (product, index) => {
         let response = await deleteFromCart(product)
         console.log(response)
         let newItems = [...cart]
-        newItems.filter(Item => Item._id != response._id)
+        newItems.splice(index, 1)
         setCart(newItems)
         alert('deleted item')
     }
@@ -59,7 +59,7 @@ const Cart = () => {
     <div>
     {
     cart 
-    ? cart.map((item) => 
+    ? cart.map((item, index) => 
     <div>
         <p>Name: {item.name}</p>
         <p>Price per item: {item.price}</p>
@@ -67,7 +67,7 @@ const Cart = () => {
         <button onClick={() => decreaseQuantity(item)}>-</button>
         <p>Total Price: {item.price * item.numberSelected}</p>
         <button onClick={() => increaseQuantity(item)}>+</button>    
-        <button onClick={() => deleteHandler(item)}>delete from cart</button>
+        <button onClick={() => deleteHandler(item, index)}>Delete from cart</button>
     </div>
     )
     :
