@@ -1,0 +1,28 @@
+.categoryBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.categoryProduct{
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .categoryButton {
+    padding: 0.5rem 1rem;
+    border: 2px solid rgb(170, 44, 44);
+    border-radius: 12px;
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin: 0 0.5rem;
+  }
+  
+  .categoryButton:hover {
+    background-color: rgb(204, 139, 139);
+    color: #fff;
+  }
