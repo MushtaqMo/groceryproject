@@ -8,7 +8,11 @@ import ShowSnacks from "./pages/snacks"
 import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowFruitAndVeg from "./pages/fruitAndVeg";
 import Cart from "./pages/cart"
+<<<<<<< HEAD
 import Search from "./pages/search"
+=======
+import "./App.css"
+>>>>>>> Sade-New
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
