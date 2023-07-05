@@ -36,6 +36,13 @@ const Home = () => {
             <Link to = '/fruitAndVeg'><button>Fruit and Vegetables</button></Link>
             <Link to = '/meatAndFish'><button>Meat and Fish</button></Link>
             <Link to = '/frozenFood'><button>Frozen Food</button></Link>
+            <img src = {'../images/drinks.jpg'}/>
+            <img src = {'../images/dairy.jpg'}/>
+            <img src = {'../images/frozen.jpg'}/>
+            <img src = {'../images/fruitveg.jpg'}/>
+            <img src = {'../images/meatfish.jpg'}/>
+            <img src = {'../images/snacks.jpg'}/>
+           
             
             
 
