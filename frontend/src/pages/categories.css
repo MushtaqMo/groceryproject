@@ -26,3 +26,8 @@
     background-color: rgb(204, 139, 139);
     color: #fff;
   }
+
+  .categoryImage {
+    max-width: 300px;
+    max-height: 150px;
+  }
