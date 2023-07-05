@@ -9,6 +9,7 @@ import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowFruitAndVeg from "./pages/fruitAndVeg";
 import Cart from "./pages/cart"
 import Search from "./pages/search"
+import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 

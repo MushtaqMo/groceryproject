@@ -1,6 +1,7 @@
 import { useState } from "react"
 import stock from '../availableStock'
 import { addToCart } from "../api/addToCart";
+import "./categories.css"
 
 const addHandler = async (item) => {
     let product = {
@@ -17,13 +18,16 @@ const ShowDairy = () => {
     return (
         <div>
             <h1>Dairy</h1>
+            <div className = "categoryBox">
             {stock.filter(item => item.category === "dairy").map(dairyStock =>
-            <div>
+            <div className = "categoryProduct">
+                <img className = "categoryImage" src = {dairyStock.image}/>
                 <p>{dairyStock.name}</p>
                 <p>£{dairyStock.price.toFixed(2)}</p>
-                <button onClick = {() => addHandler(dairyStock)}>Add To Basket</button>
+                <button className = "categoryButton" onClick = {() => addHandler(dairyStock)}>Add To Basket</button>
             </div>
             )}
+            </div>
         </div>
     )
 }
