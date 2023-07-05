@@ -3,6 +3,7 @@ import { readCart } from "../api/readCart";
 import Card from "../components/Card";
 import  { deleteFromCart } from "../api/deleteFromCart";
 import { editCart } from "../api/editCartQuantity"
+import "./cart.css"
 
 const Cart = () => {
     const [cart, setCart] = useState([])
@@ -80,22 +81,18 @@ const Cart = () => {
 
     return (
     <div>
-
-    <h1>
-        cart
-    </h1>
+    <h2 className="heading"> Cart </h2>
     <div>
-    {
-    cart 
+    { cart 
     ? cart.map((item, index) => 
-    <div>
-        <p>Name: {item.name}</p>
-        <p>Price per item: {item.price}</p>
-        <p>Number selected: {item.numberSelected}</p>
-        <button onClick={() => decreaseQuantity(item)}>-</button>
+    <div className="cart-item">
+        <p className="item-name">Name: {item.name}</p>
+        <p className="item-price">Price per item: {item.price}</p>
+        <p className="item-num">Number selected: {item.numberSelected}</p>
+        <button className="cart-button" onClick={() => decreaseQuantity(item)}>-</button>
         <p>Total Price: {item.price * item.numberSelected}</p>
-        <button onClick={() => increaseQuantity(item)}>+</button>    
-        <button onClick={() => deleteHandler(item, index)}>Delete from cart</button>
+        <button className="cart-button" onClick={() => increaseQuantity(item)}>+</button>    
+        <button className="cart-button" onClick={() => deleteHandler(item, index)}>Delete from cart</button>
     </div>
     )
     :
@@ -104,7 +101,7 @@ const Cart = () => {
 
     </div>
     <div>
-        <button onClick = {() => deleteAll(cart, setCart)}>Empty Cart</button>
+        <button className="empty-button" onClick = {() => deleteAll(cart, setCart)}>Empty Cart</button>
     </div>
     <div>
         <p>Total: {total}</p>
