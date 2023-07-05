@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { addToCart } from "../api/addToCart";
 import {Link} from "react-router-dom";
 import Search from "./search";
+import "./Home.css"
 
 const Home = () => {
 
@@ -30,18 +31,41 @@ const Home = () => {
     // if (!products) return <h1>loading...</h1>
     return (
         <div>
-            <Link to = '/drinks'><button>Drinks</button></Link>
-            <Link to = '/snacks'><button>Snacks</button></Link>
-            <Link to = '/dairy'><button>Dairy</button></Link>
-            <Link to = '/fruitAndVeg'><button>Fruit and Vegetables</button></Link>
-            <Link to = '/meatAndFish'><button>Meat and Fish</button></Link>
-            <Link to = '/frozenFood'><button>Frozen Food</button></Link>
-            <img src = {'../images/drinks.jpg'}/>
-            <img src = {'../images/dairy.jpg'}/>
-            <img src = {'../images/frozen.jpg'}/>
-            <img src = {'../images/fruitveg.jpg'}/>
-            <img src = {'../images/meatfish.jpg'}/>
-            <img src = {'../images/snacks.jpg'}/>
+
+        
+            <div class= "row">
+            <div class= "column">
+            <img className= "drinks" src = {'../images/drinks.jpg'}/>
+            <Link to = '/drinks'><button className= "drinksbtn">Drinks</button></Link>
+            </div>
+
+            <div class="column">
+            <img className= "dairy" src = {'../images/dairy.jpg'}/>
+            <Link to = '/dairy'><button className="dairybtn" >Dairy</button></Link>
+            </div>
+
+            <div class="column">
+            <img className= "fruitveg" src = {'../images/fruitveg.jpg'}/>
+            <Link to = '/fruitAndVeg'><button className="fruitvegbtn">Fruit and Vegetables</button></Link>
+            </div>
+
+            <div class="column">
+            <img className= "frozen" src = {'../images/frozen.jpg'}/>
+            <Link to = '/frozenFood'><button className="frozenbtn">Frozen Food</button></Link>
+            </div>
+
+            <div class="column">
+            <img className= "meatfish" src = {'../images/meatfish.jpg'}/>
+            <Link to = '/meatAndFish'><button className="meatfishbtn">Meat and Fish</button></Link>
+            </div>
+
+            <div class="column">
+            <img className= "snacks"src = {'../images/snacks.jpg'}/>
+            <Link to = '/snacks'><button className="snacksbtn">Snacks</button></Link>
+            </div>
+
+            </div>
+            
            
             
             
