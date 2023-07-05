@@ -39,6 +39,7 @@ const Search = () => {
             }).map((value, key) => {
                 return(
                     <div className="user" key={key}>
+                        <img className = "searchImage" src = {value.image}/>
                         <p>{value.name}</p>
                         <p>£{value.price.toFixed(2)}</p>
                         <button className = "addButton" onClick = {() => addHandler(value)}>Add To Basket</button>

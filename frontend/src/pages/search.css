@@ -43,3 +43,8 @@
   .searchInputBar:focus {
     border: 3px solid rgb(170, 44, 44);
   }
+
+  .searchImage {
+    max-height: 100px;
+    max-width: 100px
+  }
