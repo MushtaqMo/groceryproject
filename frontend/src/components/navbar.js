@@ -12,6 +12,9 @@ const Navbar = () => {
                     <Link to='/cart'> 
                     <button className="nav-button"> Basket </button>
                     </Link>
+                    <Link to='/search'> 
+                    <button className="nav-button"> Search </button>
+                    </Link>
                     
                 </div>
             </header>

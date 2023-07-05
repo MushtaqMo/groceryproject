@@ -8,6 +8,7 @@ import ShowSnacks from "./pages/snacks"
 import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowFruitAndVeg from "./pages/fruitAndVeg";
 import Cart from "./pages/cart"
+import Search from "./pages/search"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
@@ -50,7 +51,11 @@ const App = () => {
             <Route 
                 path='/fruitAndVeg'
                 element={<ShowFruitAndVeg/>}
-            />                     
+            />
+            <Route 
+                path='/search'
+                element={<Search/>}
+            />                       
         </Routes>
         </BrowserRouter>
         </div>
