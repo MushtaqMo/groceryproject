@@ -1,6 +1,7 @@
 import { useState } from "react"
 import stock from '../availableStock'
 import { addToCart } from "../api/addToCart";
+import "./categories.css"
 
 const addHandler = async (item) => {
     let product = {
@@ -20,7 +21,7 @@ const ShowDairy = () => {
             {stock.filter(item => item.category === "dairy").map(dairyStock =>
             <div>
                 <p>{dairyStock.name}</p>
-                <p>{dairyStock.price}</p>
+                <p>£{dairyStock.price.toFixed(2)}</p>
                 <button onClick = {() => addHandler(dairyStock)}>Add To Basket</button>
             </div>
             )}
