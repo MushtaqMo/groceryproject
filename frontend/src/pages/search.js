@@ -1,7 +1,20 @@
 import {useState} from "react"
 import stock from '../availableStock'
+import { addToCart } from "../api/addToCart";
 
 const Search = () => {
+
+    const addHandler = async (item) => {
+        let product = {
+        name: item.name,
+        price: item.price,
+        category: item.category,
+        numberSelected: 1
+        }
+        let response = await addToCart(product)
+        alert('added item')
+        }
+        
     const [searchTerm, setSearchTerm] = useState("")
     return (
         <div className="search">
@@ -23,6 +36,7 @@ const Search = () => {
                     <div className="user" key={key}>
                         <p>{value.name}</p>
                         <p>{value.price}</p>
+                        <button onClick = {() => addHandler(value)}>Add To Basket</button>
                         </div>
                        )
                 })}
