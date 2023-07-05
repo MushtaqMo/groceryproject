@@ -1,7 +1,6 @@
 import { useState } from "react"
 import stock from '../availableStock'
 import { addToCart } from "../api/addToCart";
-import "./categories.css"
 
 const addHandler = async (item) => {
     let product = {
