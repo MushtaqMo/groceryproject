@@ -8,6 +8,7 @@ import ShowSnacks from "./pages/snacks"
 import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowFruitAndVeg from "./pages/fruitAndVeg";
 import Cart from "./pages/cart"
+import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
