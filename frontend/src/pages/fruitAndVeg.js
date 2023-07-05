@@ -21,6 +21,7 @@ const ShowFruitAndVeg = () => {
             <div className = "categoryBox">
             {stock.filter(item => item.category === "fruit&veg").map(fruitVegStock =>
             <div className = "categoryProduct">
+                <img className = "categoryImage" src = {fruitVegStock.image}/>
                 <p>{fruitVegStock.name}</p>
                 <p>£{fruitVegStock.price.toFixed(2)}</p>
                 <button className = "categoryButton" onClick = {() => addHandler(fruitVegStock)}>Add To Basket</button>
