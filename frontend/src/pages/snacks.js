@@ -20,7 +20,7 @@ const ShowSnacks = () => {
             {stock.filter(item => item.category === "snacks").map(snackStock =>
             <div>
                 <p>{snackStock.name}</p>
-                <p>{snackStock.price}</p>
+                <p>£{snackStock.price.toFixed(2)}</p>
                 <button onClick = {() => addHandler(snackStock)}>Add To Basket</button>
             </div>
             )}
