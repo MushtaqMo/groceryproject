@@ -33,8 +33,8 @@ const Home = () => {
         <div>
 
         
-            <div class= "row">
-            <div class= "column">
+            <div class= "grid">
+            <div class= "child">
             <img className= "drinks" src = {'../images/drinks.jpg'}/>
             <Link to = '/drinks'><button className= "drinksbtn">Drinks</button></Link>
             </div>
