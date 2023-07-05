@@ -73,6 +73,7 @@ const Cart = () => {
             console.log(`After that new total is ${newTotal}`)
             setTotal(newTotal)
         }
+
         checkTotal()
     
     }, [])
@@ -88,10 +89,10 @@ const Cart = () => {
     <div className="cart-item">
         <p className="item-name">Name: {item.name}</p>
         <p className="item-price">Price per item: {item.price}</p>
-        <p className="item-num">Number selected: {item.numberSelected}</p>
         <button className="cart-button" onClick={() => decreaseQuantity(item)}>-</button>
-        <p>Total Price: {item.price * item.numberSelected}</p>
+        <p className="item-num">Number selected: {item.numberSelected}</p>
         <button className="cart-button" onClick={() => increaseQuantity(item)}>+</button>    
+        <p className="item-total">Total Price: {(item.price * item.numberSelected).toFixed(2)}</p>
         <button className="cart-button" onClick={() => deleteHandler(item, index)}>Delete from cart</button>
     </div>
     )
@@ -104,7 +105,7 @@ const Cart = () => {
         <button className="empty-button" onClick = {() => deleteAll(cart, setCart)}>Empty Cart</button>
     </div>
     <div>
-        <p>Total: {total}</p>
+        <p className="total">Total: {total.toFixed(2)}</p>
     </div>
 </div>
     )
