@@ -9,6 +9,7 @@ import ShowMeatAndFish from "./pages/meatAndFish";
 import ShowFruitAndVeg from "./pages/fruitAndVeg";
 import Cart from "./pages/cart"
 import Search from "./pages/search"
+import ChooseDelivery from "./pages/checkout";
 import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -56,7 +57,11 @@ const App = () => {
             <Route 
                 path='/search'
                 element={<Search/>}
-            />                       
+            />        
+            <Route 
+                path='/checkout'
+                element={<ChooseDelivery/>}
+            />                 
         </Routes>
         </BrowserRouter>
         </div>
