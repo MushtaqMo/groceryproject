@@ -87,12 +87,12 @@ const Cart = () => {
     { cart 
     ? cart.map((item, index) => 
     <div className="cart-item">
-        <p className="item-name">Name: {item.name}</p>
-        <p className="item-price">Price per item: {item.price}</p>
+        <p className="item-name">{item.name}</p>
+        <p className="item-price">Price per item: £{item.price.toFixed(2)}</p>
         <button className="cart-button" onClick={() => decreaseQuantity(item)}>-</button>
-        <p className="item-num">Number selected: {item.numberSelected}</p>
+        <p className="item-num">{item.numberSelected}</p>
         <button className="cart-button" onClick={() => increaseQuantity(item)}>+</button>    
-        <p className="item-total">Total Price: {(item.price * item.numberSelected).toFixed(2)}</p>
+        <p className="item-total">Total Price: £{(item.price * item.numberSelected).toFixed(2)}</p>
         <button className="cart-button" onClick={() => deleteHandler(item, index)}>Delete from cart</button>
     </div>
     )
@@ -105,7 +105,7 @@ const Cart = () => {
         <button className="empty-button" onClick = {() => deleteAll(cart, setCart)}>Empty Cart</button>
     </div>
     <div>
-        <p className="total">Total: {total.toFixed(2)}</p>
+        <p className="total">Total: £{total.toFixed(2)}</p>
     </div>
 </div>
     )
