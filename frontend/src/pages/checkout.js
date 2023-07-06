@@ -251,7 +251,7 @@ const ChooseDelivery = () => {
                     </div>
                 </div>
                 <div className = "buttonContainer">
-                    <button className = "submitButton" type = "submit">Submit</button>
+                    <button className = "submitButton" type = "submit">Order</button>
                 </div>
                 </form>
             </div>

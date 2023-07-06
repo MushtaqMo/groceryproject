@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { readCart } from "../api/readCart";
 import Card from "../components/Card";
+import {Link} from "react-router-dom";
 import  { deleteFromCart } from "../api/deleteFromCart";
-import { editCart } from "../api/editCartQuantity"
-import "./cart.css"
+import { editCart } from "../api/editCartQuantity";
+import "./cart.css";
 
 const Cart = () => {
     const [cart, setCart] = useState([])
@@ -101,11 +102,14 @@ const Cart = () => {
     }
 
     </div>
-    <div>
+    <div className = "emptyButtonContainer">
         <button className="empty-button" onClick = {() => deleteAll(cart, setCart)}>Empty Cart</button>
     </div>
     <div>
         <p className="total">Total: £{total.toFixed(2)}</p>
+    </div>
+    <div className = "checkoutButtonContainer">
+        <Link to = '/checkout'><button className="cart-button">Checkout</button></Link>
     </div>
 </div>
     )

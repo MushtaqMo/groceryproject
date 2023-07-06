@@ -78,3 +78,13 @@
     float: right;
     margin-right: 150px;
   }
+
+  .checkoutButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .emptyButtonContainer {
+    display: flex;
+    justify-content: center;
+  }
