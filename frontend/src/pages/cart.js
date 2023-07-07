@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { readCart } from "../api/readCart";
-import Card from "../components/Card";
 import {Link} from "react-router-dom";
 import  { deleteFromCart } from "../api/deleteFromCart";
 import { editCart } from "../api/editCartQuantity";
