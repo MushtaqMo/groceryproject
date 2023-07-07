@@ -66,11 +66,8 @@ const Cart = () => {
     useEffect(() => {
         const checkTotal = async () => {
             const data = await readCart()
-            console.log(`data.products is ${data.products}`)
             let newTotal = total
-            console.log(`New total is should be same as total ${newTotal}`)
             data.products.map((item) => newTotal += item.price * item.numberSelected)
-            console.log(`After that new total is ${newTotal}`)
             setTotal(newTotal)
         }
 
