@@ -6,17 +6,19 @@ const ChooseDelivery = () => {
     const today = new Date()
     const tomorrow = new Date(today)
     tomorrow.setDate(tomorrow.getDate() + 1)
-    let tomorrowDay = tomorrow.getDate() <10?`0${tomorrow.getDate()}`:`${tomorrow.getDate}` 
+    let tomorrowDay = tomorrow.getDate() <10?`0${tomorrow.getDate()}`:`${tomorrow.getDate()}` 
     let tomorrowMonth = tomorrow.getMonth() + 1 <10?`0${tomorrow.getMonth() + 1}`:`${tomorrow.getMonth() + 1}`
     let tomorrowYear = tomorrow.getFullYear()
     const dayAfterTomorrow = new Date(today)
     dayAfterTomorrow.setDate(today.getDate() + 2)
-    let dayAfterTomorrowDay = dayAfterTomorrow.getDate() <10?`0${dayAfterTomorrow.getDate()}`:`${dayAfterTomorrow.getDate}`
+    let dayAfterTomorrowDay = dayAfterTomorrow.getDate() <10?`0${dayAfterTomorrow.getDate()}`:`${dayAfterTomorrow.getDate()}`
     let dayAfterTomorrowMonth = dayAfterTomorrow.getMonth() + 1 <10?`0${dayAfterTomorrow.getMonth() + 1}`:`${dayAfterTomorrow.getMonth() + 1}`
     let dayAfterTomorrowYear = dayAfterTomorrow.getFullYear()
     const threeDaysAway = new Date(today)
     threeDaysAway.setDate(today.getDate() + 3)
-    let threeDaysDay = threeDaysAway.getDate() <10?`0${threeDaysAway.getDate()}`:`${threeDaysAway.getDate}` 
+    console.log(threeDaysAway)
+    console.log(threeDaysAway.getDate())
+    let threeDaysDay = threeDaysAway.getDate()<10?`0${threeDaysAway.getDate()}`:`${threeDaysAway.getDate()}` 
     let threeDaysMonth = threeDaysAway.getMonth() + 1 <10?`0${threeDaysAway.getMonth() + 1}`:`${threeDaysAway.getMonth() + 1}`
     let threeDaysYear = threeDaysAway.getFullYear()
 
